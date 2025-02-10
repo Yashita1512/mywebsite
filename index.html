@@ -3,142 +3,488 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Developer Portfolio</title>
+    <meta name="description" content="Yashita Sharma - Full Stack Developer Portfolio">
+    <link rel="icon" href="images/title_logo.png" type="image/png">
+    <title>Yashita Sharma | Full Stack Developer</title>
+    
+    <!-- Consolidated CSS imports -->
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
 </head>
-<body>
-    <nav class="navbar">
-        <div class="logo">
-            <span class="logo-icon">⟳</span>
-        </div>
-        <div class="nav-links">
-            <a href="#about">About</a>
-            <a href="#portfolio">Portfolio</a>
-            <a href="#contact">Contact</a>
-        </div>
-        <div class="search-bar">
-            <input type="text" placeholder="Search...">
-            <button><i class="fas fa-search"></i></button>
-        </div>
-    </nav>
 
-    <header class="hero">
-        <div class="hero-content">
-            <h1 data-aos="fade-up">I'M <span class="highlight">Your Name</span></h1>
-            <p data-aos="fade-up" data-aos-delay="200">Python Developer & Technology Consultant</p>
-            <button class="cta-button" data-aos="fade-up" data-aos-delay="400">Contact Me</button>
-            <div class="social-links" data-aos="fade-up" data-aos-delay="600">
-                <a href="#"><i class="fab fa-facebook"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-linkedin"></i></a>
-                <a href="#"><i class="fab fa-whatsapp"></i></a>
+<body>
+    <header>
+        <nav class="navbar" data-component="navigation">
+            <div>
+                <a href="">
+                    <img src="images/logo.png" alt="Yashita_Sharma_Logo" height="30">
+                </a>
             </div>
-        </div>
+            <div class="nav-links">
+                <a href="#about" data-nav-link>About</a>
+                <a href="#experience" data-nav-link>Experience</a>
+                <a href="#projects" data-nav-link>
+                    <button class="primary-button">PROJECTS</button>
+                </a>
+                <a href="#education" data-nav-link>Education</a>
+                <a href="#skills" data-nav-link>Skills</a>
+            </div>
+            <button class="primary-button" data-action="download-cv" onclick="downloadCV()">
+                VIEW RESUME <img src="images/download_icon.png" alt="download" height="14">
+            </button>
+            <button class="hamburger" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+        </nav>
     </header>
 
-    <section id="about" class="about">
-        <h2 data-aos="fade-right">About</h2>
-        <p data-aos="fade-up">
-            Dedicated technology professional with expertise in Python development and consulting.
-            Passionate about creating efficient solutions and driving technological innovation.
-        </p>
-    </section>
-
-    <section id="skills" class="skills">
-        <h2 data-aos="fade-right">My Skills</h2>
-        <div class="skills-grid">
-            <div class="skill-card" data-aos="zoom-in">
-                <img src="/api/placeholder/64/64" alt="Python">
-                <span>Python</span>
-            </div>
-            <div class="skill-card" data-aos="zoom-in">
-                <img src="/api/placeholder/64/64" alt="Flutter">
-                <span>Flutter</span>
-            </div>
-            <div class="skill-card" data-aos="zoom-in">
-                <img src="/api/placeholder/64/64" alt="Ubuntu">
-                <span>Ubuntu</span>
-            </div>
-            <div class="skill-card" data-aos="zoom-in">
-                <img src="/api/placeholder/64/64" alt="Git">
-                <span>Git</span>
-            </div>
-        </div>
-    </section>
-
-    <section id="portfolio" class="portfolio">
-        <h2 data-aos="fade-right">Portfolio</h2>
-        <div class="portfolio-grid">
-            <div class="portfolio-item" data-aos="fade-up">
-                <img src="/api/placeholder/400/300" alt="Project 1">
-                <div class="portfolio-overlay">
-                    <h3>Project 1</h3>
-                    <p>Description of project</p>
+    <main>
+        <section id="hero" class="hero" data-component="hero">
+            <div class="hero-content">
+                <h1>I'm Yashita Sharma, <span class="typing-text" data-dynamic-text></span></span></h1>
+                <p>A Full-Stack Developer, Driven by Curiosity & Committed to Building Meaningful Digital Applications</p>
+                <div class="almamater">
+                    <p>Alma Mater:</p>
+                    <a href="#education">
+                        <img src="images/iitm_logo.png" alt="iitm_logo" height="30">
+                    </a>
+                    <a href="#education">
+                        <img src="images/sinhgad_logo.png" alt="sinhgad_logo" height="30">
+                    </a>
+                </div>
+                <a href="#projects">
+                    <button class="secondary-button">EXPLORE PROJECTS</button>
+                </a>
+                <div class="social-links-hero" data-component="social-links">
+                    <a href="https://www.linkedin.com/in/yashita-sharma-raju/"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/Yashita1512"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.youtube.com/@buildandbeyondbyyashita"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=yashita151293@gmail.com"><i class="fa-sharp fa-regular fa-envelope"></i></a>
                 </div>
             </div>
-            <div class="portfolio-item" data-aos="fade-up" data-aos-delay="200">
-                <img src="/api/placeholder/400/300" alt="Project 2">
-                <div class="portfolio-overlay">
-                    <h3>Project 2</h3>
-                    <p>Description of project</p>
+            <div class="hero-images">
+                <div class="hero-bg-image">
+                    <img src="images/half-disc.svg" alt="background shape">
                 </div>
+                <img src="images/Hero_Photo.JPG" alt="Yashita_Sharma_Portrait">      
             </div>
-            <div class="portfolio-item" data-aos="fade-up" data-aos-delay="400">
-                <img src="/api/placeholder/400/300" alt="Project 3">
-                <div class="portfolio-overlay">
-                    <h3>Project 3</h3>
-                    <p>Description of project</p>
+        </section>
+    
+        <section id="about" class="about" data-component="about">
+            <div class="rotating-disc">
+                <img src="images/rotating-disc.svg" alt="Shape" data-aos="zoom-in" data-aos-duration="1200" data-aos-delay="300" class="aos-init aos-animate">
+            </div>
+            <div class="about-content">
+                <h1 class="about-heading">About Me</h1>
+                <p>With a solid foundation in full-stack development and over 2 years of hands-on experience in React, Typescript and Node.js, I specialize in creating scalable, user-focused solutions. 
+                My strengths lie in crafting reusable components, optimizing performance, and collaborating across teams to deliver seamless user experiences.
+                As a self-taught programmer, I excel at quickly mastering new concepts and applying them effectively to live projects, driving innovation and business success.</p>
+                <p>Beyond coding, I am passionate about reading (non-fiction), Kathak, swimming, yoga, resistance training, and exploring creative problem-solving through technology. These interests fuel my continuous learning and help me maintain a balanced, curious mindset.</p>
+                <a href="#testimonials">
+                    <button class="secondary-button">VIEW TESTIMONIALS</button>
+                </a>
+            </div>
+        </section>
+    
+        <section id="projects" data-component="projects">
+            <h1>My Projects</h1>
+            <div class="primary-button-box">
+                <div class="left-button">
+                    <button class="primary-button" data-category="web-dev" onclick="filterProjects('web-dev')">WEB DEVELOPMENT</button> 
                 </div>
+                <button class="primary-button" data-category="web-design" onclick="filterProjects('web-design')">WEB DESIGN</button>
             </div>
-        </div>
-    </section>
+            <div class="projects-grid">
+                <div id="videoModal" class="modal">
+                    <div class="modal-content">
+                        <span class="close" onclick="closeModal()">&times;</span>
+                        <video id="modalVideo" controls autoplay>
+                            <source id="videoSource" src="" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
 
-    <section id="experience" class="experience">
-        <h2 data-aos="fade-right">Experience</h2>
-        <div class="timeline">
-            <div class="timeline-item" data-aos="fade-left">
-                <div class="timeline-content">
-                    <h3>Senior Python Developer</h3>
-                    <h4>Company Name - 2021</h4>
-                    <p>Led development of enterprise applications using Python and related technologies.</p>
+                <div class="projects-item card" data-category="web-dev">
+                    <h2>WORDIT</h2>
+                    <p>A Blogging Website</p>
+                    <img class="projects-img" src="images/wordit.png" alt="Hirely Screenshot">
+                    <div class="play-button-div">
+                        <button class="play-button" onclick="openModal('videos/dummy_video.mp4')">
+                            <img src="images/red-play-button.png">
+                        </button>
+                    </div>
+                </div>
+    
+                <div class="projects-item card" data-category="web-dev">
+                    <h2>PAYEASY</h2>
+                    <p>A Payments App</p>
+                    <img class="projects-img" src="images/payeasy.png" alt="Hirely Screenshot">
+                    <div class="play-button-div">
+                        <button class="play-button" onclick="openModal('videos/dummy_video.mp4')">
+                            <img src="images/red-play-button.png">
+                        </button>
+                    </div>
+                </div>
+    
+                <div class="projects-item card" data-category="web-dev">
+                    <h2>SIMON GAME</h2>
+                    <p>A Game(JavaScript)</p>
+                    <img class="projects-img" src="images/simongame.png" alt="Hirely Screenshot">
+                    <div class="play-button-div">
+                        <button class="play-button" onclick="openModal('videos/dummy_video.mp4')">
+                            <img src="images/red-play-button.png">
+                        </button>
+                    </div>
+                </div>
+    
+                <div class="projects-item card" data-category="web-dev">
+                    <h2>REACT TABLE</h2>
+                    <p>A Reusable React Component</p>
+                    <img class="projects-img" src="images/tablecomp.png" alt="Hirely Screenshot">
+                    <div class="play-button-div">
+                        <button class="play-button" onclick="openModal('videos/dummy_video.mp4')">
+                            <img src="images/red-play-button.png">
+                        </button>
+                    </div>
+                </div>
+    
+                <div class="projects-item card design-projects"  data-category="web-design" style="display:none;">
+                    <h2>JANSUKH TECHNOLOGIES</h2>
+                    <p>A Software Services Company</p>
+                    <img class="projects-img" src="images/jansukh.png" alt="Hirely Screenshot">
+                    <div class="play-button-div">
+                        <button class="play-button" onclick="openModal('videos/dummy_video.mp4')">
+                            <img src="images/red-play-button.png">
+                        </button>
+                    </div>
+                </div>
+    
+                <div class="projects-item card design-projects"  data-category="web-design" style="display:none;">
+                    <h2>DHAWAL BANKER PORTFOLIO</h2>
+                    <p>A Freelancing Consultant's Portfolio</p>
+                    <img class="projects-img" src="images/dhawal.png" alt="Hirely Screenshot">
+                        <div class="play-button-div">
+                            <button class="play-button" onclick="openModal('videos/dummy_video.mp4')">
+                                <img src="images/red-play-button.png">
+                            </button>
+                        </div>
+                </div>
+    
+                <div class="projects-item card design-projects"  data-category="web-design" style="display:none;">
+                    <h2>RUDRA ELECTRO POWER</h2>
+                    <p>An Electrical Services Company</p>
+                    <img class="projects-img" src="images/res.png" alt="Hirely Screenshot">
+                    <div class="play-button-div">
+                       <button class="play-button" onclick="openModal('videos/dummy_video.mp4')">
+                           <img src="images/red-play-button.png">
+                       </button>
+                   </div>
+                </div>
+    
+                <div class="projects-item card design-projects"  data-category="web-design" style="display:none;">
+                    <h2>APEX DIGITAL</h2>
+                    <p>A Website Development Agency</p>
+                    <img class="projects-img" src="images/apex.png" alt="Hirely Screenshot">
+                    <div class="play-button-div">
+                        <button class="play-button" onclick="openModal('videos/dummy_video.mp4')">
+                            <img src="images/red-play-button.png">
+                        </button>
+                    </div>
                 </div>
             </div>
-            <div class="timeline-item" data-aos="fade-left" data-aos-delay="200">
-                <div class="timeline-content">
-                    <h3>Python Developer</h3>
-                    <h4>Company Name - 2019</h4>
-                    <p>Developed and maintained Python applications and services.</p>
+        </section>
+    
+        <section id="experience" data-component="experience">
+            <h1>Experience</h1>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <img src="images/polyglots_logo.png" alt="polyglots_logo" height="30px">
+                        <h2>Polyglots Software</h2>
+                        <h3>Software Developer</h3>
+                        <h4>07/2023 – 12/2024</h4>
+                    </div>
+                </div>
+                <div class="sub-timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h3>Call Drive</h3>
+                            <p>Key Technologies: TypeScript, ReactJS, Golang, Semantic UI, Tanstack Forms & Query, Styled Components</p>
+                            <ul>
+                                <li>Developed a platform for managing call campaigns & optimizing buyer-target interactions</li>
+                                <li>Implemented CRUD operations using Golang & Tanstack Query</li>
+                                <li>Built a routing plan component for managing targets</li>
+                            </ul>
+                        </div>
+                    </div>
+    
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h3>UI for a Travel Booking Website</h3>
+                            <p>Key Technologies: TypeScript, ReactJS, NextJS, NodeJS, CSS, Semantic UI</p>
+                            <ul>
+                                <li>Developed flight search & filters, user login, authentication, and dashboard</li>
+                                <li>Built flight trip summary with traveler details, meals, discount coupons, GST</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <img src="images/title_logo.png" alt="freelance_logo" height="30px">
+                        <h2>Self-employed</h2>
+                        <h3>Freelance Web Developer</h3>
+                        <h4>01/2023 – 06/2023</h4>
+                        <p>Designed & coded websites using HTML, CSS, Bootstrap, JavaScript, NodeJS, ExpressJS & ReactJS</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <img src="images/nptel_logo.png" alt="nptel_logo" height="45px">
+                        <h2>National Programme on Technology Enhanced Learning (NPTEL)</h2>
+                        <h3>Subject Matter Expert</h3>
+                        <h4>02/2021 – 01/2023</h4>
+                        <p>Content creation & management / Created more than 650 academic end-to-end video solutions for GATE previous year questions</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <img src="images/baoo_logo.png" alt="baoo_logo" height="35px">
+                        <h2>BaoO e-learning</h2>
+                        <h3>Chief Executive Officer</h3>
+                        <h4>10/2020 – 08/2021</h4>
+                        <p>Formed and managed a team of 14 content creators</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <img src="images/title_logo.png" alt="tutor_logo" height="30px">
+                        <h2>Self-employed</h2>
+                        <h3>Freelance Tutor</h3>
+                        <h4>10/2020 – 06/2023</h4>
+                        <p>One to one & classroom coaching for Physics, Mathematics, Chemistry</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <img src="images/iitm_logo.png" alt="iitm_logo" height="35px">
+                        <h2>Indian Institute of Technology, Madras</h2>
+                        <h3>Prime Minister Research Fellow</h3>
+                        <h4>07/2019 – 09/2020</h4>
+                        <p>Assistance in research - Research paper review & edit, teaching</p>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    
+        <section id="skills" data-component="skills">
+            <h1>Skills</h1>
+            <div class="skills-grid">
+                <div class="skill-column">
+                    <div class="category-label-wrapper">
+                        <div class="category-label">LANGUAGES</div>
+                    </div>
+                    <div class="skills-list">
+                        <div class="skill-item">TypeScript</div>
+                        <div class="skill-item">JavaScript</div>
+                        <div class="skill-item">Java</div>
+                        <div class="skill-item">C-Programming</div>
+                        <div class="skill-item">Golang</div>
+                    </div>
+                </div>
+                <div class="skill-column">
+                    <div class="category-label-wrapper">
+                        <div class="category-label">BACKEND</div>
+                    </div>
+                    <div class="skills-list">
+                        <div class="skill-item">Java</div>
+                        <div class="skill-item">GoLang</div>
+                        <div class="skill-item">NextJS</div>
+                        <div class="skill-item">NodeJS</div>
+                        <div class="skill-item">Express</div>
+                    </div>
+                </div>
+        
+                <div class="skill-column">
+                    <div class="category-label-wrapper">
+                        <div class="category-label">FRONTEND</div>
+                    </div>
+                    
+                    <div class="skills-list">
+                        <div class="skill-item">ReactJS</div>
+                        <div class="skill-item">NextJS</div>
+                        <div class="skill-item">jQuery</div>
+                        <div class="skill-item">CSS, Bootstrap, Tailwind</div>
+                        <div class="skill-item">HTML</div>
+                    </div>
+                </div>
+    
+                <div class="skill-column">
+                    <div class="category-label-wrapper">
+                        <div class="category-label">DATABASES</div>
+                    </div>
+                    <div class="skills-list">
+                        <div class="skill-item">MongoDB</div>
+                        <div class="skill-item">PostgreSQL</div>
+                        <div class="skill-item">Prisma (ORM)</div>
+                    </div>
+                </div>
+            
+                <div class="skill-column">
+                    <div class="category-label-wrapper">
+                        <div class="category-label">DEPLOYMENT</div>
+                    </div>
+                    <div class="skills-list">
+                        <div class="skill-item">AWS</div>
+                        <div class="skill-item">Cloudflare</div>
+                        <div class="skill-item">Vercel</div>
+                    </div>
+                </div>
 
-    <section id="testimonial" class="testimonial">
-        <h2 data-aos="fade-right">Testimonial</h2>
-        <div class="testimonial-card" data-aos="fade-up">
-            <p>"The quality of work and attention to detail is exceptional. A true professional who delivers results."</p>
-            <div class="testimonial-author">
-                <img src="/api/placeholder/50/50" alt="Client">
-                <span>Client Name</span>
+                <div class="skill-column">
+                    <div class="category-label-wrapper">
+                        <div class="category-label">MISCELLANEOUS</div>
+                    </div>
+                    <div class="skills-list">
+                        <div class="skill-item">GitHub</div>
+                        <div class="skill-item">Debugging</div>
+                        <div class="skill-item">Docker & Containers</div>
+                        <div class="skill-item">Jira</div>
+                        <div class="skill-item">Scrum</div>
+                    </div>
+                </div>
+    
+                <div class="skill-column">
+                    <div class="category-label-wrapper">
+                        <div class="category-label">SOFT-SKILLS</div>
+                    </div>
+                    <div class="skills-list">
+                        <div class="skill-item">Open-minded</div>
+                        <div class="skill-item">Problem Solver</div>
+                        <div class="skill-item">Clear thinker</div>
+                        <div class="skill-item">Collaborator</div>
+                        <div class="skill-item">Structured communicator</div>
+                        <div class="skill-item">Decisive</div>
+                    </div>
+                </div>
+
             </div>
-        </div>
-    </section>
-
-    <footer>
+        </section>
+    
+        <section id="education" class="experience" data-component="education">
+            <h1>Education</h1>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <img src="images/iitm_logo.png" alt="iitm_logo" height="35px">
+                        <h2>Indian Institute of Technology Madras</h2>
+                        <h3>MTech Offshore Technology</h3>
+                        <h4>07/2017 – 06/2019 | CGPA: 9.16</h4>
+                        <p>Project - Blast loading propagation on hulls; their behavior and design compatibility</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <img src="images//sinhgad_logo.png" alt="sinhgad_logo" height="30px">
+                        <h2>Sinhgad College of Engineering, Pune University</h2>
+                        <h3>BE Civil Engineering</h3>
+                        <h4>06/2011 – 05/2015 | Distinction</h4>
+                        <p>Project - Structural design and analysis of cable supported one column building</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+        <section id="cocurriculars" data-component="cocurriculars">
+            <h1>Co-curriculars</h1>
+            <div class="cocurriculars-grid">
+                <div class="cocurriculars-item card">
+                    <h2>OUTBOUND TRAINER</h2>
+                    <p>07/2018 - 02/2020</p>
+                    <p style="font-weight: 600; font-size: larger;">Indian Institute of Technology Madras</p>
+                    <p>Worked as a member of an Outbound Training team. Trained students for outbound group physical activities with an aim of engaging them in healthy living, motivated and active lifestyle, overcoming their fears and most importantly enhancing team spirit.</p>
+                </div>
+                <div class="cocurriculars-item card">
+                    <h2>PLACEMENT COORDINATOR</h2>
+                    <p>12/2018 - 05/2019</p>
+                    <p style="font-weight: 600; font-size: larger;">Indian Institute of Technology Madras</p>
+                    <p>Worked as a member of the placement team at IITM. The role involved reaching out to potential companies, managing the student and companies data & assisting the companies for smooth and efficient recruitment rounds.
+                    </p>
+                </div>
+    
+            </div>
+        </section>
+    
+        <section id="testimonials" data-component="testimonials">
+            <h1>Testimonials</h1>
+            <div class="carousel-container">
+                <button class="carousel-arrow prev-arrow">&lt;</button>
+                    <div class="carousel-track">
+                        <div class="testimonial-card">
+                            <p>
+                                "The quality of work and attention to detail is exceptional. A true professional who delivers results.
+                                The quality of work and attention to detail is exceptional. A true professional who delivers results.
+                                The quality of work and attention to detail is exceptional. A true professional who delivers results."
+                            </p>
+                            <div class="testimonial-author">
+                                <img src="images/polyglots_logo.png" alt="Client">
+                                <div>
+                                    <p>Ashish Gaikwad</p>
+                                    <p class="testimonial-details">Chief Executive Officer, Polyglots Software</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonial-card">
+                            <p> "The quality of work and attention to detail is exceptional. A true professional who delivers results.
+                                The quality of work and attention to detail is exceptional. A true professional who delivers results.
+                                The quality of work and attention to detail is exceptional. A true professional who delivers results."</p>
+                            <div class="testimonial-author">
+                                <img src="images/polyglots_logo.png" alt="Client">
+                                <div>
+                                    <p>Ashish Gaikwad</p>
+                                    <p class="testimonial-details">Chief Executive Officer, Polyglots Software</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="testimonial-card">
+                            <p> "The quality of work and attention to detail is exceptional. A true professional who delivers results.
+                                The quality of work and attention to detail is exceptional. A true professional who delivers results.
+                                The quality of work and attention to detail is exceptional. A true professional who delivers results."</p>
+                            <div class="testimonial-author">
+                                <img src="images/polyglots_logo.png" alt="Client">
+                                <div>
+                                    <p>Ashish Gaikwad</p>
+                                    <p class="testimonial-details">Chief Executive Officer, Polyglots Software</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                <button class="carousel-arrow next-arrow">&gt;</button>
+            </div>
+        </section>
+    </main>
+    
+    <footer data-component="footer">
         <div class="footer-content">
-            <div class="logo">⟳</div>
-            <div class="social-links">
-                <a href="#"><i class="fab fa-facebook"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-linkedin"></i></a>
-                <a href="#"><i class="fab fa-whatsapp"></i></a>
+            <img src="images/logo.png" height="20">
+            <div class="social-links-hero">
+                <a href="https://www.linkedin.com/in/yashita-sharma-raju/"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/Yashita1512"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.youtube.com/@buildandbeyondbyyashita"><i class="fa-brands fa-youtube"></i></a>
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=yashita151293@gmail.com"><i class="fa-sharp fa-regular fa-envelope"></i></a>
             </div>
+                <a class="back-to-top" href="#hero">Back To Top &uarr;</a>
         </div>
     </footer>
 
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
+
+
