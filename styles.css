@@ -813,6 +813,10 @@ footer {
         font-size: 16px;
     }
 
+    .navbar{
+        padding: 2.5% 5%;
+    }
+
    .hero-content{
     padding-top: 20%;
    }
