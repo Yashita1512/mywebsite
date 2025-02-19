@@ -374,9 +374,9 @@ video {
     border-radius: 50%;
 }
 
-/* .projects-item:hover .play-button-div{
+.projects-item:hover .play-button-div{
     display: block;
-} */
+}
 
 .design-projects{
     background: var(--card-background-design-gradient)!important;
