@@ -761,6 +761,12 @@ footer {
         }
 }
 
+@media screen and (min-height: 700px) {
+    .hero{
+        height: 90vh;
+    }
+}
+
 @media screen and (max-width: 600px) {
     .nav-links {
         position: fixed;
@@ -800,6 +806,9 @@ footer {
 }
 
 @media screen and (max-width: 480px) {
+    body, html {
+        overflow-x: hidden;
+    }
     p,h4,li{
         font-size: 14px;
     }
@@ -814,7 +823,7 @@ footer {
     }
 
     .navbar{
-        padding: 2.5% 5%;
+        padding: 4% 5%;
     }
 
    .hero-content{
@@ -849,8 +858,3 @@ footer {
 
 }
 
-@media screen and (min-height: 700px) {
-    .hero{
-        height: 90vh;
-    }
-}
