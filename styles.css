@@ -740,6 +740,17 @@ footer {
         height: 80vh;
     }
 
+    .play-button-div {
+        display: block !important;
+    }
+    .play-button img {
+        height: 40px;
+        width: 40px; 
+    }
+    .modal-content{
+        padding: 0.25rem;
+    }
+
     .skills-grid{
         grid-template-columns: repeat(2, 1fr);
     }
@@ -822,6 +833,10 @@ footer {
         font-size: 16px;
     }
 
+    section:not(.hero,.about) {
+        padding: 5% 15%;
+    }
+
     .navbar{
         padding: 4% 5%;
     }
@@ -844,6 +859,10 @@ footer {
 
    .category-label{
     font-size: 18px;
+   }
+
+   .projects-grid{
+    width: 75vw;
    }
    .skill-item{
     font-size: 14px;
