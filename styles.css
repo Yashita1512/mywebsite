@@ -704,6 +704,9 @@ footer {
         grid-template-columns: repeat(1, 1fr);
         width: 60vw;
     }
+    .close{
+        display: none;
+    }
 
     .skills-grid {
         grid-template-columns: repeat(3, 1fr);
@@ -751,6 +754,7 @@ footer {
         padding: 0.25rem;
         width: 80vw;
     }
+ 
 
     .skills-grid{
         grid-template-columns: repeat(2, 1fr);
